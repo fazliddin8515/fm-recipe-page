@@ -13,6 +13,7 @@
   --t1-font: "Young Serif", serif;
   --t1-weight: 400;
   --t1-size: 4rem;
+  --t1-size-mobile: 3.2rem;
   --t1-lh: 1;
   --t1-ls: 0px;
 
@@ -100,7 +101,7 @@ body {
 
 .article__list li {
   position: relative;
-  padding-left: calc(2 * var(--space-200));
+  padding-left: calc(3 * var(--space-200));
 }
 
 .article__list li::before {
@@ -217,4 +218,35 @@ body {
 
 .article__table strong {
   color: var(--clr-brown-800);
+}
+
+@media (max-width: 48em) {
+  .article {
+    width: 61.6rem;
+  }
+}
+
+@media (max-width: 23.4375em) {
+  body {
+    padding: 0px;
+  }
+
+  .article {
+    display: block;
+    width: 100%;
+    padding: 0px;
+    border-radius: 0px;
+  }
+
+  .article__top-image {
+    border-radius: 0px;
+  }
+
+  .article__text-content {
+    padding: var(--space-500) var(--space-400);
+  }
+
+  .article__heading {
+    font-size: var(--t1-size-mobile);
+  }
 }
